@@ -13,6 +13,8 @@
 		0811159C1768076100D2DCD7 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0811159A1768076100D2DCD7 /* Credits.rtf */; };
 		0811159F1768076100D2DCD7 /* SemiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0811159E1768076100D2DCD7 /* SemiAppDelegate.m */; };
 		081115A21768076100D2DCD7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 081115A01768076100D2DCD7 /* MainMenu.xib */; };
+		081115AA176807CE00D2DCD7 /* SemiDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 081115A9176807CE00D2DCD7 /* SemiDrawView.m */; };
+		081115AD1768085400D2DCD7 /* NSString+SemiGlyph.m in Sources */ = {isa = PBXBuildFile; fileRef = 081115AC1768085400D2DCD7 /* NSString+SemiGlyph.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		0811159D1768076100D2DCD7 /* SemiAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SemiAppDelegate.h; sourceTree = "<group>"; };
 		0811159E1768076100D2DCD7 /* SemiAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SemiAppDelegate.m; sourceTree = "<group>"; };
 		081115A11768076100D2DCD7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		081115A8176807CE00D2DCD7 /* SemiDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SemiDrawView.h; sourceTree = "<group>"; };
+		081115A9176807CE00D2DCD7 /* SemiDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SemiDrawView.m; sourceTree = "<group>"; };
+		081115AB1768085400D2DCD7 /* NSString+SemiGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SemiGlyph.h"; sourceTree = "<group>"; };
+		081115AC1768085400D2DCD7 /* NSString+SemiGlyph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SemiGlyph.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,10 @@
 				0811159D1768076100D2DCD7 /* SemiAppDelegate.h */,
 				0811159E1768076100D2DCD7 /* SemiAppDelegate.m */,
 				081115A01768076100D2DCD7 /* MainMenu.xib */,
+				081115A8176807CE00D2DCD7 /* SemiDrawView.h */,
+				081115A9176807CE00D2DCD7 /* SemiDrawView.m */,
+				081115AB1768085400D2DCD7 /* NSString+SemiGlyph.h */,
+				081115AC1768085400D2DCD7 /* NSString+SemiGlyph.m */,
 				081115921768076100D2DCD7 /* Supporting Files */,
 			);
 			path = "Draw Glyphs";
@@ -169,6 +179,8 @@
 			files = (
 				081115981768076100D2DCD7 /* main.m in Sources */,
 				0811159F1768076100D2DCD7 /* SemiAppDelegate.m in Sources */,
+				081115AA176807CE00D2DCD7 /* SemiDrawView.m in Sources */,
+				081115AD1768085400D2DCD7 /* NSString+SemiGlyph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
