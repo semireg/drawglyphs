@@ -29,7 +29,7 @@
         aRect.origin.y += leadShift;
     
     aRect.origin.y -= 0;
-    aRect.origin.x += round(leadShift/8.5);     // I don't know of an alternative to this secret sauce.
+    aRect.origin.x += round(leadShift/4.5);     // I don't know of an alternative to this secret sauce.
     
     [self drawAtPoint:aRect.origin withAttributes:attributes];
 }

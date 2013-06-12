@@ -26,13 +26,13 @@
     NSPoint origin = CGPointMake(15, 10);
     
     // Setup String
-    NSString *string = @"0.00";
+    NSString *string = @"Semi";
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                         [NSFont fontWithName:@"Helvetica" size:120], NSFontAttributeName,
                                         [NSColor blackColor], NSForegroundColorAttributeName, nil];
     
     NSDictionary *attributes2 = [NSDictionary dictionaryWithObjectsAndKeys:
-                                [NSFont fontWithName:@"Digital-7Italic" size:50], NSFontAttributeName,
+                                [NSFont fontWithName:@"Courier" size:50], NSFontAttributeName,
                                 [NSColor blackColor], NSForegroundColorAttributeName, nil];
 
     NSDictionary *attributes3 = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -63,7 +63,7 @@
     // --- 2
     
     // Draw Glyph Rect
-    origin = CGPointMake(260, 170);
+    origin = CGPointMake(310, 170);
     glyphRect = [@"kgf" rectOfGlyphsAtPoint:origin withAttributes:attributes2];
     glyphPath = [NSBezierPath bezierPathWithRect:glyphRect];
     [[NSColor greenColor] set];
@@ -74,7 +74,7 @@
     // --- 3
     
     // Draw Glyph Rect
-    origin = CGPointMake(350, 170);
+    origin = CGPointMake(420, 170);
     glyphRect = [@"KGf" rectOfGlyphsAtPoint:origin withAttributes:attributes3];
     glyphPath = [NSBezierPath bezierPathWithRect:glyphRect];
     [[NSColor greenColor] set];
@@ -83,7 +83,7 @@
     [@"KGf" drawGlyphsAtPoint:origin withAttributes:attributes3];
     
     // Draw Glyph Rect
-    origin = CGPointMake(350, 70);
+    origin = CGPointMake(370, 70);
     glyphRect = [@"kg" rectOfGlyphsAtPoint:origin withAttributes:attributes3];
     glyphPath = [NSBezierPath bezierPathWithRect:glyphRect];
     [[NSColor greenColor] set];

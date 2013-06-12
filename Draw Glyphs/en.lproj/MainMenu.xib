@@ -1294,7 +1294,7 @@
 			<object class="NSWindowTemplate" id="972006081">
 				<int key="NSWindowStyleMask">7</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{335, 390}, {523, 314}}</string>
+				<string key="NSWindowRect">{{335, 390}, {523, 274}}</string>
 				<int key="NSWTFlags">1954021376</int>
 				<string key="NSWindowTitle">Draw Glyphs</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -1307,19 +1307,19 @@
 						<object class="NSCustomView" id="847939764">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">268</int>
-							<string key="NSFrameSize">{523, 314}</string>
+							<string key="NSFrameSize">{523, 274}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSClassName">SemiDrawView</string>
 						</object>
 					</array>
-					<string key="NSFrameSize">{523, 314}</string>
+					<string key="NSFrameSize">{523, 274}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="847939764"/>
 				</object>
-				<string key="NSScreenRect">{{0, 0}, {2560, 1418}}</string>
+				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
