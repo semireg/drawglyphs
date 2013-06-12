@@ -19,17 +19,16 @@
 {
     NSRect aRect = [self rectOfGlyphsAtPoint:aPoint withAttributes:attributes];
     
-    NSInteger leadShift = [referenceString leadShiftForGlyphsWithAttributes:attributes];
-    NSInteger descentShift = [referenceString descentShiftForGlyphsWithAttributes:attributes];
+    NSInteger yShift = [referenceString yShiftForGlyphsWithAttributes:attributes];
+    NSInteger yDeviceShift = [referenceString yDeviceShiftForGlyphsWithAttributes:attributes];
+    NSInteger xDeviceShift = [referenceString xDeviceShiftForGlyphsWithAttributes:attributes];
+
+    aRect.origin.y -= yDeviceShift;
     
-    //NSLog(@"descentShift:%ld leadShift:%ld", descentShift, leadShift);
-    aRect.origin.y -= descentShift;
+    if(yDeviceShift<=0)
+        aRect.origin.y += yShift;
     
-    if(descentShift<=0)
-        aRect.origin.y += leadShift;
-    
-    aRect.origin.y -= 0;
-    aRect.origin.x += round(leadShift/4.5);     // I don't know of an alternative to this secret sauce.
+    aRect.origin.x -= xDeviceShift;
     
     [self drawAtPoint:aRect.origin withAttributes:attributes];
 }
@@ -120,16 +119,22 @@
     return shortestGlyph;
 }
 
--(NSInteger)descentShiftForGlyphsWithAttributes:(NSDictionary*)attributes
+-(NSInteger)xDeviceShiftForGlyphsWithAttributes:(NSDictionary*)attributes
 {
-    NSRect descentRect = [self boundingRectWithSize:NSZeroSize options:NSStringDrawingUsesDeviceMetrics attributes:attributes];
-    return descentRect.origin.y;  // Magic B (see below)
+    NSRect rect = [self boundingRectWithSize:NSZeroSize options:NSStringDrawingUsesDeviceMetrics attributes:attributes];
+    return rect.origin.x;
 }
 
--(NSInteger)leadShiftForGlyphsWithAttributes:(NSDictionary*)attributes
+-(NSInteger)yDeviceShiftForGlyphsWithAttributes:(NSDictionary*)attributes
 {
-    NSRect leadRect = [self boundingRectWithSize:NSZeroSize options:0 attributes:attributes];
-    return leadRect.origin.y;  // Magic B (see below)
+    NSRect rect = [self boundingRectWithSize:NSZeroSize options:NSStringDrawingUsesDeviceMetrics attributes:attributes];
+    return rect.origin.y;
+}
+
+-(NSInteger)yShiftForGlyphsWithAttributes:(NSDictionary*)attributes
+{
+    NSRect rect = [self boundingRectWithSize:NSZeroSize options:0 attributes:attributes];
+    return rect.origin.y;
 }
 
 -(NSString*)stringWithoutPunctuation
